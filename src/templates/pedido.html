@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Confirmação de pedido</title>
+    </head>
+
+    <body>
+
+        <div style="background: purple; width: 100%; height: 50px; margin-bottom: 40px;">
+            <h1 style="color: white; margin-left: 15px; margin-top: 5px; display: inline-block;">Cubos Market</h1>
+        </div>
+
+        <h2> Olá, {{ nomeusuario }}</h2>
+        <p>Obrigado. Seu pedido foi registrado com sucesso.</p>
+        <p>Veja abaixo o resumo:</p>
+
+        <div>
+
+            <ul style="list-style: none; font-weight: bold;">
+                {{#each resumoPedido}}
+                    <li>Nome do produto: <span style="font-weight: normal;">{{descricao}}</span> </li>
+                    <li>Quantidade comprada: <span style="font-weight: normal;">{{quantidade}}</span></li>
+                    <li style="margin-bottom: 20px;">Valor unitário: <span style="font-weight: normal;">{{valorUnitario}}</span></li>
+                {{/each}}
+            </ul>
+
+            <p style="font-weight: bold">Valor total da compra:  <span style="font-weight: normal;">{{ valorTotal }}</span></p>
+
+        </div>
+
+    </body>
+
+</html>
